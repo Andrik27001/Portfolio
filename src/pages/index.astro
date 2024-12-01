@@ -1,10 +1,14 @@
 ---
 import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialPill from "../components/SocialPill.astro";
 import Layout from "../layouts/Layout.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Portfolio">
+<Layout title="Andrik's Portfolio - Front End Developer" description="">
   <main>
     <section class="pt-[120px] w-[740px]">
       <h1 class="text-4xl font-semibold gap-4 pb-[30px] flex">
@@ -20,11 +24,28 @@ import Layout from "../layouts/Layout.astro";
         development
       </h2>
 
-      <ul>
-        <li></li>
-        <li><a href=""></a></li>R
-        <li><a href=""></a></li>
-      </ul>
+      <nav class="flex gap-4 mt-12">
+        <SocialPill link="https://www.linkedin.com/in/andrik-sp/">
+          <LinkedInIcon class="size-5" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill link="https://github.com/Andrik27001">
+          <GitHubIcon class="size-5" />
+          GitHub
+        </SocialPill>
+        <SocialPill link="https://www.linkedin.com/in/andrik-sp/">
+          <MailIcon class="size-5" />
+          LinkedIn
+        </SocialPill>
+      </nav>
+    </section>
+
+    <section class="mt-36">
+      <div>Working Experience</div>
+      <h2 class="text-3xl pb-xl mb-5 font-semibold">
+        Take a closer look to my work
+      </h2>
+      <Experience />
     </section>
   </main>
 </Layout>
