@@ -1,8 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Portfolio">
-	<main></main>
-</Layout>
+  <main>
+    <section class="pt-[120px] w-[740px]">
+      <h1 class="text-4xl font-semibold gap-4 pb-[30px] flex">
+        Hey, I'm Andrik <a
+          class="flex"
+          href="https://www.linkedin.com/in/andrik-sp/"
+          target="_blank"><Badge>Available for hiring</Badge></a
+        >
+      </h1>
 
+      <h2 class="text-3xl pb-xl">
+        Web designer and developer based in Catalonia, Spain. I specialize in UI
+        development
+      </h2>
+
+      <ul>
+        <li></li>
+        <li><a href=""></a></li>R
+        <li><a href=""></a></li>
+      </ul>
+    </section>
+  </main>
+</Layout>
