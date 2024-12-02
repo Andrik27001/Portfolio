@@ -1,24 +1,74 @@
 ---
+import NextJSIcon from "./icons/NextJS.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
+import JavaScriptIcon from "./icons/JavaScript.astro";
+import WordpressIcon from "./icons/Wordpress.astro";
+
+const TAGS = {
+  NEXTJS: {
+    name: "NextJS",
+    icon: NextJSIcon,
+    color: "000000",
+  },
+  TAILWINDCSS: {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+    color: "#38BDF8",
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    icon: JavaScriptIcon,
+    color: "#F0DB4F",
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    icon: WordpressIcon,
+    color: "#00749C",
+  },
+};
+
 const PROJECTS = [
   {
     title: "Vertical Freediving",
     description: "A corporate website.",
-    image: "",
-    tags: ["Wordpress", "JavaScript"],
+    image: "../../public/images/projects/VerticalFreediving.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.WORDPRESS],
+    link: "",
   },
   {
     title: "Vertical Freediving",
     description: "A corporate website.",
-    image: "",
-    tags: ["Wordpress", "JavaScript"],
+    image: "../../public/images/projects/VerticalFreediving.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.WORDPRESS],
+    link: "",
   },
 ];
 ---
 
 {
-  PROJECTS.map((project) => {
-    <article>
-      <h3>{}</h3>
-    </article>
+  PROJECTS.map(({ title, description, image, tags }) => {
+    return (
+      <article class="flex gap-10 items-center">
+        <img
+          class="w-[50%] rounded-xl border border-solid border-white/10"
+          src={image}
+          alt="Project image"
+        />
+        <div>
+          <h3 class="text-3xl font-semibold mb-5">{title}</h3>
+          <div class="flex gap-4">
+            {tags.map((tag) => {
+              return (
+                <div class="flex gap-2">
+                  <tag.icon class="size-6" />
+                  {tag.name}
+                </div>
+              );
+            })}
+          </div>
+          <p class="mb-8">{description}</p>
+        </div>
+      </article>
+    );
   })
 }
