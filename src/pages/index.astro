@@ -7,6 +7,9 @@ import Layout from "../layouts/Layout.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../components/icons/Code.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Andrik's Portfolio - Front End Developer" description="">
@@ -44,13 +47,19 @@ import SectionContainer from "../components/SectionContainer.astro";
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2
-        class="text-3xl pb-xl mb-5 font-semibold mb-12 flex items-start gap-4"
-      >
-        <img class="size-8" src="../../public/images/suitcase.png" />
+      <h2 class="text-3xl mb-8 font-semibold mb-12 flex items-start gap-4">
+        <Briefcase class="size-8" />
         Working Experience
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl mb-8 font-semibold mb-12 flex items-center gap-4">
+        <Code class="size-8" />
+        Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
